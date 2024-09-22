@@ -1,7 +1,32 @@
 import './style.css'
 import javascriptLogo from './javascript.svg'
 import viteLogo from '/vite.svg'
-import { setupCounter } from './counter.js'
+
+const fetchData = async () => {
+  try {
+    const response = await fetch(import.meta.env.VITE_APP_API);
+    const dataUsers = await response.json();
+    const userList = document.createElement('div');
+    dataUsers.map( (user) =>{ 
+      userList.innerHTML += `
+                              <div> 
+                                <h3>${user.name}</h3>
+                              </div>
+                              `
+    });
+    const users = document.getElementById("users");
+    if(users) {
+      users.appendChild(userList);
+    };
+    
+  }
+  catch (e) {
+    console.log(e);
+    console.log("Error msg;", e);    
+  };
+};
+
+fetchData();
 
 document.querySelector('#app').innerHTML = `
   <div>
@@ -11,15 +36,8 @@ document.querySelector('#app').innerHTML = `
     <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
       <img src="${javascriptLogo}" class="logo vanilla" alt="JavaScript logo" />
     </a>
-    <h1>Hello GMayaS!</h1>
-    <h2>Test of code 02.</h2>
-    <div class="card">
-      <button id="counter" type="button"></button>
-    </div>
-    <p class="read-the-docs">
-      Click on the Vite logo to learn more
-    </p>
+    <h1>Hello GMayaS. 🙂🖐</h1>
+    <h2>Users Name:</h2>
+    <div id="users"></div>
   </div>
-`
-
-setupCounter(document.querySelector('#counter'))
+`;
