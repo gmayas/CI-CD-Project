@@ -36,8 +36,11 @@ document.querySelector('#app').innerHTML = `
     <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
       <img src="${javascriptLogo}" class="logo vanilla" alt="JavaScript logo" />
     </a>
-    <h1>Hello GMayaS. 🙂🖐</h1>
+    <h1>🙂🖐 CI/CD Project. 🙂🖐</h1>
     <h2>Users Name:</h2>
     <div id="users"></div>
+    <footer>
+        <div>© 2024 Copyright: <a> GMayaS C:/> Desarrollo en Sistemas.</a></div>
+    </footer>
   </div>
 `;
