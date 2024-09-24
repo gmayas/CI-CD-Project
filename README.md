@@ -1,7 +1,7 @@
-![](/imagenes/image_01.png)
-
 # CI-CD-Project
 Este proyecto fue creado en Vite 5.4.1, al momento de descargar este proyecto, instale las dependencias con npm install, para ejecutar npm run dev, la aplicación corre en: http://localhost:5173/
+
+![](/imagenes/image_01.png)
 
 ## CI-CD-Project
 
